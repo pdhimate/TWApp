@@ -5,6 +5,7 @@ import { Blinker } from "./components/blinker";
 import { textStyles } from "./styles/textStyles";
 import { backgrounds } from "./styles/backgroundStyles";
 import { TextInput2 } from "./components/textInput2";
+import { Button2 } from './components/button2';
 
 export default class HelloWorldApp extends Component {
   render() {
@@ -46,8 +47,10 @@ export default class HelloWorldApp extends Component {
           <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
         </View>
         <TextInput2 text="">
-
         </TextInput2>
+        <Button2>
+          
+        </Button2>
       </View>
     );
   }
