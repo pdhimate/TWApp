@@ -8,7 +8,7 @@ import { backgrounds } from "./styles/backgroundStyles";
 export default class HelloWorldApp extends Component {
   render() {
     return (
-      <View style={{  flex: 1 }}>
+      <View style={{ flex: 1 }}>
         <Text>Hello, world!</Text>
         <Greeting name="Piyush"></Greeting>
         <Greeting name="Piyush2"></Greeting>
@@ -17,6 +17,33 @@ export default class HelloWorldApp extends Component {
         <Blinker text="Welcome!!!"></Blinker>
         <Text style={backgrounds.smallBlue}>Text with background</Text>
         <Text style={backgrounds.mediumBlue}>Text with background2</Text>
+        <View style={{
+          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+        }}>
+          <View style={{ width: 50, height: 50, backgroundColor: 'powderblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
+        </View>
+        <View style={{
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: 'space-between',
+        }}>
+          <View style={{ width: 50, height: 50, backgroundColor: 'powderblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
+        </View>
+        <View style={{
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: 'center',
+        }}>
+          <View style={{ width: 50, height: 50, backgroundColor: 'powderblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
+        </View>
       </View>
     );
   }
