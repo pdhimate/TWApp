@@ -7,6 +7,7 @@ import { backgrounds } from "./styles/backgroundStyles";
 import { TextInput2 } from "./components/textInput2";
 import { Button2 } from './components/button2';
 import { Touchables } from './components/touchables';
+import NetworkCall from './components/networkCall';
 
 export default class HelloWorldApp extends Component {
   render() {
@@ -56,6 +57,9 @@ export default class HelloWorldApp extends Component {
           <Touchables>
 
           </Touchables>
+          <NetworkCall>
+            
+          </NetworkCall>
         </ScrollView>
       </View>
     );
