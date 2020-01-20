@@ -1,24 +1,52 @@
-import React, { Component } from 'react';
-import { Text, View, Button } from 'react-native';
+import React, { Fragment, Component } from 'react';
+import {
+    SafeAreaView,
+    StyleSheet,
+    View,
+    Button,
+    Text
+} from 'react-native';
+
 
 export class Counter extends Component {
-    //state object
     state = { count: 0 };
 
-    increment = () => {
-        this.setState({ count: this.state.count + 1 });
+    decrement() {
+        let count = this.state.count - 1;
+        this.setState({
+            count
+        })
     }
-    decrement = () => {
-        this.setState({ count: this.state.count - 1 });
+
+    increment() {
+        let count = this.state.count + 1;
+        this.setState({
+            count
+        })
     }
 
     render() {
+        const { count } = this.state;
         return (
-            <View>
-                <Button onPress={this.increment} title="+"></Button>
-                <Text >{this.state.count}</Text>
-                <Button onPress={this.decrement} title="-"></Button>
+            <View styles={styles.container}>
+                <Button
+                    title="increment"
+                    onPress={() => this.increment()}
+                />
+                <Text>Count: {count}</Text>
+                <Button
+                    title="decrement"
+                    onPress={() => this.decrement()}
+                />
             </View>
         );
     }
-}
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+});
