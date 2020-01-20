@@ -8,12 +8,14 @@ import { TextInput2 } from "./components/textInput2";
 import { Button2 } from './components/button2';
 import { Touchables } from './components/touchables';
 import NetworkCall from './components/networkCall';
+import { Counter } from './components/counter';
 
 export default class HelloWorldApp extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
         <ScrollView>
+          <Counter></Counter>
           <Text>Hello, world!</Text>
           <Greeting name="Piyush"></Greeting>
           <Greeting name="Piyush2"></Greeting>
